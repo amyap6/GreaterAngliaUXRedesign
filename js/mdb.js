@@ -21,7 +21,7 @@
  * 
  * Contact: office@mdbootstrap.com
  * 
- * Attribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js, jquery.easing.js, velocity.min.js, chart.js, wow.js, scrolling-navbar.js, waves.js, forms-free.js, enhanced-modals.js, treeview.js
+ * Attribution: Animate css, Twitter Bootstrap, Materialize css, Normalize css, Waves js, WOW js, Toastr, Chart.js, jquery.easing.js, velocity.min.js, chart.js, wow.js, scrolling-navbar.js, waves.js, forms-free.js, enhanced-modals.js, treeview.js
  * 
  */
 ! function(t) {

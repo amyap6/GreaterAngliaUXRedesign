@@ -1,18 +1,17 @@
-<!DOCTYPE html><html lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Greater Anglia</title>
-
+    <title>Service Updates</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/serviceUpdates.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script src="js/serviceUpdates.js"></script>
 </head>
-
 <body>
 <!-- jQuery first, then Popper.js, then Bootstrap js -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -43,7 +42,7 @@
                     <a class="nav-link" href="#">Live Departures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="serviceUpdates.html">Service Updates</a>
+                    <a class="nav-link" href="#">Journey Check</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stansted Express</a>
@@ -60,28 +59,56 @@
     </div>
 </nav>
 
-
-
-
-<!-- Full Page Image Header with Vertically Centered Content -->
-<header class="masthead">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="font-weight-light">Welcome to Greater Anglia Rail</h1>
-                <p class="lead">New Trains, new space, new possibilities. It's happening.</p>
-            </div>
-        </div>
+<!-- Ticket booking section -->
+<section>
+    <div class="container">
+        <p style="text-align: center">Book A Ticket</p>
     </div>
-
-</header>
+</section>
 
 <!-- Page Content -->
 <section class="py-5">
     <div class="container">
-        <h2 class="font-weight-light">Page Content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat reprehenderit expedita.</p>
+        <h1>Service Updates</h1>
+        <div style="width: 60%; display: inline-block; float: left">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, Date)" id="defaultOpen">View by Date</button>
+                <script>
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                </script>
+
+                <button class="tablinks" onclick="openTab(event, Train)">View by Train</button>
+            </div>
+            <div id="Date" class="tabcontent">
+                <h4>Calendar</h4>
+                <p>Clickable calendar here</p>
+            </div>
+            <div id="Train" class="tabcontent">
+                <h4>View Updates for a Train</h4>
+                <p>Search bar here for selecting a train</p>
+            </div>
+            <div style="margin-top: 5%">
+                <h4>Updates for [Date or Train]</h4>
+                <div id="updates">
+                <div style="width: 20%; display: inline-block; float:left">
+                    <p>Date here</p>
+                </div>
+                <div style="width: 80%; display: inline-block; float:left">
+                    <a href="#" style="color: red" onmouseover="style='textdecoration: underline;color: red'">Title</a>
+                    <p><b>Locations Affected:</b> details</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-left: 10%; width: 30%; display: inline-block; float: right" id="navright">
+            <div style="margin-top: 5%"><a>Sign Up To Alerts</a></div>
+            <div><a>London Underground Updates</a></div>
+            <div><a href="disruptionPolicy.html">Disruption Policy</a></div>
+            <div><a>Contact Us</a></div>
+        </div>
     </div>
 </section>
 
 </body>
+</html>
