@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Service Updates</title>
-
+    <title>Delay Repay</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/serviceUpdates.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="js/serviceUpdates.js"></script>
+
 </head>
 <body>
-<!-- jQuery first, then Popper.js, then Bootstrap js -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -33,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Buy Tickets</a>
@@ -42,7 +41,7 @@
                     <a class="nav-link" href="#">Live Departures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Journey Check</a>
+                    <a class="nav-link" href="serviceUpdates.html">Service Updates</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stansted Express</a>
@@ -66,49 +65,35 @@
     </div>
 </section>
 
-<!-- Page Content -->
 <section class="py-5">
     <div class="container">
-        <h1>Service Updates</h1>
-        <div style="width: 60%; display: inline-block; float: left">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, Date)" id="defaultOpen">View by Date</button>
-                <script>
-                    // Get the element with id="defaultOpen" and click on it
-                    document.getElementById("defaultOpen").click();
-                </script>
+        <h1>Delay Repay</h1>
+        <div style="width: 60%; display: inline-block; float: left" id="leftbox">
+            <h4 style="margin-top: 5%; color: #3647b3">Compensation – get it with our Delay Repay scheme.</h4>
+            <p><b>Get compensation from 15 minutes onwards.</b></p>
 
-                <button class="tablinks" onclick="openTab(event, Train)">View by Train</button>
-            </div>
-            <div id="Date" class="tabcontent">
-                <h4>Calendar</h4>
-                <p>Clickable calendar here</p>
-            </div>
-            <div id="Train" class="tabcontent">
-                <h4>View Updates for a Train</h4>
-                <p>Search bar here for selecting a train</p>
-            </div>
-            <div style="margin-top: 5%">
-                <h4>Updates for [Date or Train]</h4>
-                <div id="updates">
-                <div style="width: 20%; display: inline-block; float:left">
-                    <p>Date here</p>
-                </div>
-                <div style="width: 80%; display: inline-block; float:left">
-                    <a href="#" style="color: red" onmouseover="style='textdecoration: underline;color: red'">Title</a>
-                    <p><b>Locations Affected:</b> details</p>
-                </div>
-                </div>
-            </div>
+                <p>We’ve improved our Delay Repay scheme. If you hold a valid ticket for your journey, you can now claim compensation for delays of 15 minutes or more, no matter what the reason.
+                </p>
+                <p>Delays are calculated against the planned, advertised timetable so compensation is not usually offered during periods of pre-planned engineering works and when replacement bus services are used.
+                We hope you never have to claim, but if things do go wrong, see our table below to see how much you could be entitled to.</p>
+
+            <button><a href="#" onmouseover="style='textdecoration: underline;color: red'">Submit a new Delay Repay form</a></button>
+            <button><a href="#" onmouseover="style='textdecoration: underline;color: red'">Appeal an existing Delay Repay form</a></button>
+
+            <h4 style="margin-top: 5%">Table Title</h4>
+
+            <p>Table here</p>
+
+            <p>FAQs dropdown</p>
+
         </div>
         <div class="container" style="margin-left: 10%; width: 30%; display: inline-block; float: right" id="navright">
-            <div style="margin-top: 5%"><a>Sign Up To Alerts</a></div>
-            <div><a>London Underground Updates</a></div>
-            <div><a href="disruptionPolicy.html">Disruption Policy</a></div>
+            <div style="margin-top: 5%"><a>Delay Repay Help</a></div>
             <div><a>Contact Us</a></div>
+            <div><a>Send Us Feeback</a></div>
+            <div><a href="disruptionPolicy.html">Disruption Policy</a></div>
         </div>
     </div>
-</section>
 
 <section>
     <nav>
