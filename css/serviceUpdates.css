@@ -63,3 +63,9 @@
 #leftbox button a {
     color: red;
 }
+
+.compensation #top{
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
