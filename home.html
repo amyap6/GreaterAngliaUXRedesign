@@ -75,21 +75,25 @@
 <!-- Page Content -->
 <section class="py-5">
     <div class="container">
-        <div class="book" style="width: 40%; display: inline-block; float: left">
-            <h3>Book a Ticket</h3>
-            <form>
-                From: <label><input type="search" name="FromStation"></label><br>
-                To: <label><input type="search" name ="ToStation"></label>
+        <div class="bookHome" style="width: 40%; display: inline-block; float: left">
+            <h3 >Book a Ticket</h3>
+            <form class="bookTicket">
+                <label for="from">From:</label><input type="text" name="FromStation" id="from"><br>
+                <label for="to">To:</label><input type="text" name ="ToStation" id="to">
                 <br>
-                <label><input type="radio" name="TicketType" value="One Way">One Way</label>
-                <label><input type="radio" name="TicketType" value="Return">Return</label>
-                <label><input type="radio" name="TicketType" value="Open Return">Open Return</label><br>
-                OUT: <label><input type="date" name="OutDate"></label><label><input type="datetime-local" name="OutTime"></label><br>
+                <div class="ticketType">
+                <label for="oneway">One Way</label><input type="radio" name="TicketType" value="One Way" id="oneway" checked="checked">
+                <label for="return">Return</label><input type="radio" name="TicketType" value="Return" id="return">
+                <label for="open">Open Return</label><input type="radio" name="TicketType" value="Open Return" id="open">
+                </div><br>
+                <label for="outDate">Leaving Date:</label><input type="date" name="OutDate" id="outDate"><br>
+                    <label for="outTime">Leaving Time:</label><input type="datetime-local" name="OutTime" id="outTime"><br>
                 <!-- This should be greyed out and inactive if the user has not selected return -->
-                RETURN <label><input type="date" name="ReturnDate"></label><label><input type="datetime-local" name="ReturnTime"></label><br>
+                    <label for="returnDate">Returning Date:</label> <input type="date" name="ReturnDate" id="returnDate"><br>
+                    <label for="returnTime">Returning Time</label><input type="datetime-local" name="ReturnTime" id="returnTime"><br>
                 <!-- options here -->
-                <label><input type="number" name="Adults"></label><br>
-                <label><input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor"></label>
+                <label for="passengers">Passengers: </label><input type="number" name="Adults" id="passengers"><br>
+                <input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor" id="submitBook">
             </form>
         </div>
         <div style="width: 55%; display: inline-block; float: right">
@@ -100,6 +104,7 @@
         <div style="width: 55%; display: inline-block; float: right">
             <h3>Live Departures</h3>
             <h6>To view live departures and arrivals from a specific station, check the <a href="liveDepartures.html">live departures</a> page.</h6>
+            <p>Display some departures here.</p>
         </div>
 
         <div style="width: 100%; display: inline-block; float: bottom">
