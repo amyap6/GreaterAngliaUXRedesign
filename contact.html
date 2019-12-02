@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Service Updates</title>
+    <title>Contact Us</title>
 
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/serviceUpdates.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="js/serviceUpdates.js"></script>
+
 </head>
+
 <body>
 <!-- jQuery first, then Popper.js, then Bootstrap js -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -28,7 +29,6 @@
             <!-- <img src="GALogo.jpg" width="100" alt="" class="d-inline-block align-middle ml-0"> -->
             <img id="logo" class="d-inline-block mr-1" width="100" alt="Logo" src="GALogo.jpg">
         </a>
-
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
@@ -49,62 +49,40 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+                </button>
             </form>
+            <button>Login</button>
         </div>
     </div>
 </nav>
 
-<!-- Ticket booking section -->
 <section>
     <div class="container">
         <p style="text-align: center">Book A Ticket</p>
     </div>
 </section>
 
-<p style="margin-left:10%"><a href="home.html">Home</a><b> > </b> Service Updates</p>
+<p style="margin-left:10%"><a href="home.html">Home</a><b> > </b> Contact Us </p>
 
-<!-- Page Content -->
-<section class="py-5">
+<section>
     <div class="container">
-        <h3>Service Updates</h3>
-        <div style="width: 60%; display: inline-block; float: left">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, Date)" id="defaultOpen">View by Date</button>
-                <script>
-                    // Get the element with id="defaultOpen" and click on it
-                    document.getElementById("defaultOpen").click();
-                </script>
-
-                <button class="tablinks" onclick="openTab(event, Train)">View by Train</button>
-            </div>
-            <div id="Date" class="tabcontent">
-                <h4>Calendar</h4>
-                <p>Clickable calendar here</p>
-            </div>
-            <div id="Train" class="tabcontent">
-                <h4>View Updates for a Train</h4>
-                <p>Search bar here for selecting a train</p>
-            </div>
-            <div style="margin-top: 5%">
-                <h4>Updates for [Date or Train]</h4>
-                <div id="updates">
-                <div style="width: 20%; display: inline-block; float:left">
-                    <p>Date here</p>
-                </div>
-                <div style="width: 80%; display: inline-block; float:left">
-                    <a href="#" style="color: red" onmouseover="style='textdecoration: underline;color: red'">Title</a>
-                    <p><b>Locations Affected:</b> details</p>
-                </div>
-                </div>
-            </div>
+        <div style="width: 60%; display: inline-block; float: left;">
+            <h3>Contact Us</h3>
+            <p>Description</p>
+            <p>Email Icon, Facebook icon, Twitter Icon, Phone Icon</p>
         </div>
-        <div class="container" style="margin-left: 10%; width: 30%; display: inline-block; float: right" id="navright">
-            <div style="margin-top: 5%"><a>Sign Up To Alerts</a></div>
-            <div><a>London Underground Updates</a></div>
-            <div><a href="disruptionPolicy.html">Disruption Policy</a></div>
-            <div><a>Contact Us</a></div>
+        <div style="width: 30%; display: inline-block; float: right;" id="navright">
+            <div style="margin-top: 5%"><a href="disruptionPolicy.html">Disruption Policy</a></div>
+            <div><a href="delayRepay.html">Delay Repay</a></div>
+            <div><a>More Options Here</a></div>
+        </div>
+        <div style="width: 60%; display: inline-block; float: bottom;">
+            <p>Office Hours Information here</p>
+        </div>
+        <div style="width: 60%; display: inline-block; float: bottom;">
+            <p>Email Form here</p>
         </div>
     </div>
 </section>

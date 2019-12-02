@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Delay Repay</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Report a Problem</title>
+
+
     <link rel="stylesheet" href="css/serviceUpdates.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
 
+<body>
+<!-- jQuery first, then Popper.js, then Bootstrap js -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -27,7 +29,6 @@
             <!-- <img src="GALogo.jpg" width="100" alt="" class="d-inline-block align-middle ml-0"> -->
             <img id="logo" class="d-inline-block mr-1" width="100" alt="Logo" src="GALogo.jpg">
         </a>
-
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
@@ -48,77 +49,46 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+                </button>
             </form>
+            <button>Login</button>
         </div>
     </div>
 </nav>
 
-<!-- Ticket booking section -->
 <section>
     <div class="container">
         <p style="text-align: center">Book A Ticket</p>
     </div>
 </section>
 
-<p style="margin-left:10%"><a href="home.html">Home</a><b> > </b> <a href="#"> Some page</a><b> > </b> Delay Repay</p>
+<p style="margin-left:10%"><a href="home.html">Home</a><b> > </b> Report a Problem </p>
 
-<section class="py-5">
+<section>
     <div class="container">
-        <h1>Delay Repay</h1>
-        <div style="width: 60%; display: inline-block; float: left" id="leftbox">
-            <h4 style="margin-top: 5%; color: #3647b3">Compensation – get it with our Delay Repay scheme.</h4>
-            <p><b>Get compensation from 15 minutes onwards.</b></p>
-
-                <p>We’ve improved our Delay Repay scheme. If you hold a valid ticket for your journey, you can now claim compensation for delays of 15 minutes or more, no matter what the reason.
-                </p>
-                <p>Delays are calculated against the planned, advertised timetable so compensation is not usually offered during periods of pre-planned engineering works and when replacement bus services are used.
-                We hope you never have to claim, but if things do go wrong, see our table below to see how much you could be entitled to.</p>
-
-            <button><a href="#" onmouseover="style='textdecoration: underline;color: red'">Submit a new Delay Repay form</a></button>
-            <button><a href="#" onmouseover="style='textdecoration: underline;color: red'">Appeal an existing Delay Repay form</a></button>
-
-            <h4 style="margin-top: 5%">Table Title</h4>
-
-            <table style="margin-top: 5%; margin-bottom: 10%" class="compensation">
-                <tr id="top">
-                    <th>Length of Delay</th>
-                    <th>Compensation</th>
-                </tr>
-                <tr>
-                    <td id="leftone">15 to 29 minutes</td>
-                    <td>25% of the cost of your single ticket or 12.5% of the cost of your return ticket</td>
-                </tr>
-                <tr>
-                    <td id="lefttwo">30 to 59 minutes</td>
-                    <td>50% of the cost of your one-way ticket or 25% of the cost of your return ticket</td>
-                </tr>
-                <tr>
-                    <td id="leftthree">60 to 119 minutes</td>
-                    <td> 	100% of the cost of your one-way ticket or 50% of the cost of your return ticket</td>
-                </tr>
-                <tr>
-                    <td id="leftfour">120 minutes or longer</td>
-                    <td>100% of the cost of your ticket whether single or return</td>
-                </tr>
-            </table>
-
-            <p>We will use the proportionate cost of the price of the Season Ticket (i.e. 1/10th of a Weekly ticket, 1/40th of a Monthly ticket and 1/464th of an Annual ticket).</p>
-
-            <h4>FAQs</h4>
-
-
-
+        <div style="width: 60%; display: inline-block; float: left;">
+            <h3>Report Problem</h3>
+            <p>Description</p>
+            <button>Report New Problem</button>
+            <button>View Existing Reports</button>
+            <p>More description if needed</p>
         </div>
-        <div class="container" style="margin-left: 10%; width: 30%; display: inline-block; float: right" id="navright">
-            <div style="margin-top: 5%"><a>Delay Repay Help</a></div>
-            <div><a>Contact Us</a></div>
-            <div><a>Send Us Feeback</a></div>
+        <div style="width: 30%; display: inline-block; float: right" id="navright">
+            <div style="margin-top: 5%"><a>Emergency Information</a></div>
+            <div><a>Station Information</a></div>
+            <div><a>Accessibility</a></div>
             <div><a href="disruptionPolicy.html">Disruption Policy</a></div>
+            <div><a href="delayRepay.html">Delay Repay</a></div>
+        </div>
+        <div style="width: 60%; display: inline-block; float: bottom;">
+            <h3>FAQs</h3>
+            <p>Questions with dropdowns for answers</p>
         </div>
     </div>
 </section>
+
 
 <section>
     <nav>
