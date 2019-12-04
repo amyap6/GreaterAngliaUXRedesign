@@ -29,29 +29,59 @@
             <img id="logo" class="d-inline-block mr-1" width="100" alt="Logo" src="GALogo.jpg">
         </a>
 
-
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="buyTickets.html">Buy Tickets</a>
+                <li> <div class="dropdown">
+                    <button class="dropbtn" ><a href="buyTickets.html">Buy Tickets</a></button>
+                    <div class="dropdown-content">
+                        <a href="#">Timetables</a>
+                        <a href="#">Station Information</a>
+                        <a href="#">Onboard Facilities</a>
+                        <a href="#">Airport and Bus Information</a>
+                    </div>
+                </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="liveDepartures.html">Live Departures</a>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn" ><a href="liveDepartures.html">Live Departures</a></button>
+                        <div class="dropdown-content">
+                            <a href="#">London Underground</a>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="serviceUpdates.html">Service Updates</a>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn" ><a href="serviceUpdates.html" style="color: #ce0012;">Service Updates</a></button>
+                        <div class="dropdown-content">
+                            <a href="#">Sign Up To Alerts</a>
+                            <a href="delayRepay.html">Delay Repay</a>
+                            <a href="disruptionPolicy.html">Disruption Policy</a>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="reportProblem.html">Report a Problem</a>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn" ><a href="reportProblem.html">Report a Problem</a></button>
+                        <div class="dropdown-content">
+                            <a href="#">Emergency Information</a>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn" ><a href="contact.html">Contact Us</a></button>
+                        <div class="dropdown-content">
+                            <a href="#">FAQs</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+                </button>
             </form>
+            <button>Login</button>
         </div>
     </div>
 </nav>
@@ -187,9 +217,8 @@
         </div>
         <div class="container" style="margin-left: 10%; width: 30%; display: inline-block; float: right" id="navright">
             <div style="margin-top: 5%"><a>Sign Up To Alerts</a></div>
-            <div><a>London Underground Updates</a></div>
+            <div><a>Delay Repay</a></div>
             <div><a href="disruptionPolicy.html">Disruption Policy</a></div>
-            <div><a>Contact Us</a></div>
         </div>
     </div>
 </section>
