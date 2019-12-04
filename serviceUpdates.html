@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
                 <li> <div class="dropdown">
-                    <button class="dropbtn" ><a href="buyTickets.html">Buy Tickets</a></button>
+                    <button class="dropbtn" onclick="window.location.href = 'buyTickets.html';">Buy Tickets</button>
                     <div class="dropdown-content">
                         <a href="#">Timetables</a>
                         <a href="#">Station Information</a>
@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="liveDepartures.html">Live Departures</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'liveDepartures.html';">Live Departures</button>
                         <div class="dropdown-content">
                             <a href="#">London Underground</a>
                         </div>
@@ -51,7 +51,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="serviceUpdates.html" style="color: #ce0012;">Service Updates</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'serviceUpdates.html';" style="color: #ce0012;">Service Updates</button>
                         <div class="dropdown-content">
                             <a href="#">Sign Up To Alerts</a>
                             <a href="delayRepay.html">Delay Repay</a>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="reportProblem.html">Report a Problem</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'reportProblem.html';">Report a Problem</button>
                         <div class="dropdown-content">
                             <a href="#">Emergency Information</a>
                         </div>
@@ -69,7 +69,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="contact.html">Contact Us</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'contact.html';">Contact Us</button>
                         <div class="dropdown-content">
                             <a href="#">FAQs</a>
                         </div>
@@ -88,13 +88,33 @@
 
 <!-- Ticket booking section -->
 <section>
-    <div class="container">
-        <p style="text-align: center">Book A Ticket</p>
+    <div class="bookOther" style="width: 100%; display: inline-block; float: top">
+        <h4 >Book a Ticket</h4>
+        <form style="margin-top: 1%">
+            <label for="fromO">From:</label><input type="text" name="FromStation" id="fromO">
+            <label for="toO">To:</label><input type="text" name ="ToStation" id="toO">
+            <label for="outDateO">Leaving Date:</label><input type="date" name="OutDate" id="outDateO">
+            <!--<label for="outTime">Leaving Time:</label><input type="datetime-local" name="OutTime" id="outTime"><br>-->
+            <!-- This should be greyed out and inactive if the user has not selected return -->
+            <label for="returnDateO">Returning Date:</label> <input type="date" name="ReturnDate" id="returnDateO">
+            <!--<label for="returnTime">Returning Time</label><input type="datetime-local" name="ReturnTime" id="returnTime">-->
+            <br>
+            <!-- options here -->
+            <div class="rowTwo">
+                <div class="ticketTypeO">
+                    <label for="onewayO">One Way</label><input type="radio" name="TicketType" value="One Way" id="onewayO" checked="checked">
+                    <label for="returnO">Return</label><input type="radio" name="TicketType" value="Return" id="returnO">
+                    <label for="openO">Open Return</label><input type="radio" name="TicketType" value="Open Return" id="openO">
+                </div>
+                <label for="passengersO">Passengers: </label><input type="number" name="Adults" id="passengersO">
+                <input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor" id="submitBookO">
+            </div>
+        </form>
     </div>
 </section>
-
+<div class="breadcrumbs">
 <p style="margin-left:10%"><a href="home.html">Home</a><b> > </b> Service Updates</p>
-
+</div>
 <!-- Page Content -->
 <section class="py-5">
     <div class="container">

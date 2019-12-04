@@ -148,6 +148,24 @@ a:-webkit-any-link{
     text-align: right;
 }
 
+.bookOther {
+    border-radius: 5px;
+    border-color: #0f6674;
+    border-width: 1px;
+    background-color: #d6d8db;
+}
+
+.bookOther h4 {
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+
+.bookOther form label{
+    display: inline;
+    text-align: right;
+    margin-right: 1%
+}
+
 #from, #to {
     display: inline;
     float:right;
@@ -160,6 +178,18 @@ a:-webkit-any-link{
     margin-left: 2%;
 }
 
+#fromO, #toO {
+    display: inline;
+    margin-right: 3%;
+    width: 10%;
+}
+
+#onewayO, #returnO, #openO {
+    margin-right: 2%;
+    margin-left: 2%;
+    display: inline;
+}
+
 .ticketType {
     margin-top: 3%;
     margin-bottom: 2%;
@@ -167,11 +197,33 @@ a:-webkit-any-link{
     margin-right: 3%;
 }
 
+.ticketTypeO {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: #f1f8e9;
+    margin-right: 2%;
+    width: 30%;
+}
+
+.rowTwo {
+    margin-top: 1%;
+}
+
+.rowTwo div, label, input{
+    display: inline;
+}
+
 #outDate, #outTime, #returnDate, #returnTime, #passengers {
     display: inline;
     float:right;
     margin-right: 25%;
     width: 47%;
+}
+
+#passengersO {
+    display: inline;
+    margin-right: 2%;
+    width: 10%;
 }
 
 #submitBook {
@@ -190,9 +242,20 @@ a:-webkit-any-link{
     text-shadow: none;
 }
 
-.dropbtn {
+#submitBookO {
+    margin-bottom: 1%;
+    height: 5%;
+    width: 10%;
+    float: right;
+    margin-right: 5%;
+    background-color: red;
     color: white;
-    border: none;
+    border-color: grey;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: none;
+    text-shadow: none;
+    display:inline;
 }
 
 .dropdown {
@@ -225,13 +288,15 @@ a:-webkit-any-link{
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropbtn a {
+.dropbtn {
     color: #5a6268;
+    border: none;
 }
 
-.dropbtn a:hover {
+.dropbtn:hover {
     text-decoration: none;
     color: black;
+    border:none;
 }
 
 .nav-item {
@@ -242,3 +307,24 @@ a:-webkit-any-link{
     align-self: center;
 }
 
+.service a, .live a, .breadcrumbs a {
+    text-decoration: none;
+    color: red;
+}
+
+.service a:hover, .live a:hover, .breadcrumbs a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.problemForm {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.problemForm form, p, button{
+    text-align: left;
+    display: block;
+}

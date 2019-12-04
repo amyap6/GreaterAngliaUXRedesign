@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Problem Form</title>
+
+    <link rel="stylesheet" href="css/serviceUpdates.css">
+    <script src="js/problemForm.js"></script>
+</head>
+<body>
+<div class="problemForm">
+    <h2 style="color:red">We're sorry to hear that there is a problem with one of our trains or stations.</h2>
+    <h4>Please fill in the form below and Greater Anglia will deal with the issue as soon as possible.</h4>
+
+        <p>Where is the problem?</p>
+        <button style="float:left" onclick="showTrain()">Train</button>
+        <button style="float:left" onclick="showStation()">Station</button>
+    <br>
+        <!--If train is selected, show this -->
+    <form id="trainForm" style="display:none">
+        <label for="searchtrain"></label>
+        <input type="search" placeholder="Search for a train" id="searchtrain"><br>
+        <label for="typeOfProblem">What sort of problem is it?</label><br>
+        <select id="typeOfProblem">
+            <option value="x">x</option>
+            <option value="y">y</option>
+            <option value="z">z</option>
+        </select><br>
+        <!--Maybe another dropdown with more specific issues -->
+        <label for="describe">Please describe the problem.</label><br>
+        <input type="text" id="describe"><br>
+        <input type="submit" value="Submit" id="submitTrainProblem">
+    </form>
+        <!--If station is selected, show this -->
+    <form id="stationForm" style="display:none">
+        <label for="searchstation"></label>
+        <input type="search" placeholder="Search for a station" id="searchstation"><br>
+        <label for="typeOfProblem2">What sort of problem is it?</label><br>
+        <select id="typeOfProblem2">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+        </select><br>
+        <!--Maybe another dropdown with more specific issues -->
+        <label for="describe2">Please describe the problem.</label><br>
+        <input type="text" id="describe2"><br>
+        <input type="submit" value="Submit" id="submitStationProblem">
+    </form>
+</div>
+</body>
+</html>

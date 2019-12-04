@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
                 <li> <div class="dropdown">
-                    <button class="dropbtn" ><a href="buyTickets.html" style="color: #ce0012;">Buy Tickets</a></button>
+                    <button class="dropbtn" onclick="window.location.href = 'buyTickets.html';"style="color: #ce0012;">Buy Tickets</button>
                     <div class="dropdown-content">
                         <a href="#">Timetables</a>
                         <a href="#">Station Information</a>
@@ -44,7 +44,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="liveDepartures.html">Live Departures</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'liveDepartures.html';">Live Departures</button>
                         <div class="dropdown-content">
                             <a href="#">London Underground</a>
                         </div>
@@ -52,7 +52,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="serviceUpdates.html" >Service Updates</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'serviceUpdates.html';">Service Updates</button>
                         <div class="dropdown-content">
                             <a href="#">Sign Up To Alerts</a>
                             <a href="delayRepay.html">Delay Repay</a>
@@ -62,7 +62,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="reportProblem.html">Report a Problem</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'reportProblem.html';">Report a Problem</button>
                         <div class="dropdown-content">
                             <a href="#">Emergency Information</a>
                         </div>
@@ -70,7 +70,7 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn" ><a href="contact.html">Contact Us</a></button>
+                        <button class="dropbtn" onclick="window.location.href = 'contact.html';">Contact Us</button>
                         <div class="dropdown-content">
                             <a href="#">FAQs</a>
                         </div>
@@ -87,32 +87,31 @@
     </div>
 </nav>
 
-<section>
-    <div class="container">
-        <p style="text-align: center">Book A Ticket</p>
-    </div>
-</section>
-
+<div class="breadcrumbs">
 <p style="margin-left:10%"><a href="home.html">Home</a><b> > </b> Buy Tickets </p>
-
+</div>
 <section>
     <div class="container">
-        <div style="width: 60%; display: inline-block; float: left;">
-            <h3>Book a Ticket</h3>
-                <form>
-                    From: <label><input type="search" name="FromStation"></label>
-                    To: <label><input type="search" name ="ToStation"></label>
-                    <br>
-                    <label><input type="radio" name="TicketType" value="One Way">One Way</label>
-                    <label><input type="radio" name="TicketType" value="Return">Return</label>
-                    <label><input type="radio" name="TicketType" value="Open Return">Open Return</label><br>
-                    OUT: <label><input type="date" name="OutDate"></label><label><input type="datetime-local" name="OutTime"></label><br>
-                    <!-- This should be greyed out and inactive if the user has not selected return -->
-                    RETURN <label><input type="date" name="ReturnDate"></label><label><input type="datetime-local" name="ReturnTime"></label><br>
-                    <!-- options here -->
-                    <label><input type="number" name="Adults"></label>
-                    <label><input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor"></label>
-                </form>
+        <div class="bookHome" style="width: 40%; display: inline-block; float: left">
+            <h3 >Book a Ticket</h3>
+            <form class="bookTicket">
+                <label for="from">From:</label><input type="text" name="FromStation" id="from"><br>
+                <label for="to">To:</label><input type="text" name ="ToStation" id="to">
+                <br>
+                <div class="ticketType">
+                    <label for="oneway">One Way</label><input type="radio" name="TicketType" value="One Way" id="oneway" checked="checked">
+                    <label for="return">Return</label><input type="radio" name="TicketType" value="Return" id="return">
+                    <label for="open">Open Return</label><input type="radio" name="TicketType" value="Open Return" id="open">
+                </div><br>
+                <label for="outDate">Leaving Date:</label><input type="date" name="OutDate" id="outDate"><br>
+                <label for="outTime">Leaving Time:</label><input type="datetime-local" name="OutTime" id="outTime"><br>
+                <!-- This should be greyed out and inactive if the user has not selected return -->
+                <label for="returnDate">Returning Date:</label> <input type="date" name="ReturnDate" id="returnDate"><br>
+                <label for="returnTime">Returning Time</label><input type="datetime-local" name="ReturnTime" id="returnTime"><br>
+                <!-- options here -->
+                <label for="passengers">Passengers: </label><input type="number" name="Adults" id="passengers"><br>
+                <input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor" id="submitBook">
+            </form>
         </div>
         <div style="width: 30%; display: inline-block; float: right;" id="navright">
             <div style="margin-top: 5%"><a>Timetables</a></div>
@@ -120,7 +119,7 @@
             <div><a>Onboard Facilities</a></div>
             <div><a>Airport and Bus Information</a></div>
         </div>
-        <div style="width: 60%; display: inline-block; float: bottom;">
+        <div style="width: 100%; display: inline-block; float: bottom;">
             <h3>Offers</h3>
         </div>
     </div>
