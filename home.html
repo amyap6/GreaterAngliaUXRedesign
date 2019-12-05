@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+
     <title>Greater Anglia</title>
 
 
@@ -19,10 +20,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<a class="skip-main" href="#main">Skip to main content</a>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <div class="container" style="padding-right:0;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" style="margin:0;padding:0;">
+            <span class="navbar-toggler-icon" ></span>
         </button>
         <a class="navbar-brand" href="home.html">
             <!-- Logo Image -->
@@ -33,8 +35,9 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
                 <li> <div class="dropdown">
-                    <button class="dropbtn" onclick="window.location.href = 'buyTickets.html';">Buy Tickets</button>
-                    <div class="dropdown-content">
+                    <button id="toplink" class="dropbtn" onclick="window.location.href = 'buyTickets.html';"
+                            aria-haspopup="true" aria-owns="submeny" aria-controls="submenu" aria-expanded="false">Buy Tickets</button>
+                    <div id="submenu" role="group" aria-expanded="false" aria-labelledby="toplink" class="dropdown-content">
                         <a href="#">Timetables</a>
                         <a href="#">Station Information</a>
                         <a href="#">Onboard Facilities</a>
@@ -77,16 +80,15 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" >
                 <input class="form-control mr-sm-2" type="search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
                 </button>
             </form>
-            <button>Login</button>
+            <button style="margin-left: 2.5%">Login</button>
         </div>
     </div>
 </nav>
-
 
 <!-- Full Page Image Header with Vertically Centered Content -->
 <header class="masthead">
@@ -94,7 +96,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
                 <h1 class="font-weight-light">Welcome to Greater Anglia Rail</h1>
-                <p class="lead">New Trains, new space, new possibilities. It's happening.</p>
+                <p class="lead" style="text-align: center">New Trains, new space, new possibilities. It's happening.</p>
             </div>
         </div>
     </div>
@@ -102,7 +104,7 @@
 </header>
 
 <!-- Page Content -->
-<section class="py-5">
+<section class="py-5" id="main" tabindex="-1">
     <div class="container">
         <div class="bookHome" style="width: 40%; display: inline-block; float: left">
             <h3 >Book a Ticket</h3>
@@ -110,11 +112,14 @@
                 <label for="from">From:</label><input type="text" name="FromStation" id="from"><br>
                 <label for="to">To:</label><input type="text" name ="ToStation" id="to">
                 <br>
+                <fieldset>
+                    <legend><span>What ticket type do you require?</span></legend>
                 <div class="ticketType">
                 <label for="oneway">One Way</label><input type="radio" name="TicketType" value="One Way" id="oneway" checked="checked">
                 <label for="return">Return</label><input type="radio" name="TicketType" value="Return" id="return">
                 <label for="open">Open Return</label><input type="radio" name="TicketType" value="Open Return" id="open">
-                </div><br>
+                </div>
+                </fieldset><br>
                 <label for="outDate">Leaving Date:</label><input type="date" name="OutDate" id="outDate"><br>
                     <label for="outTime">Leaving Time:</label><input type="datetime-local" name="OutTime" id="outTime"><br>
                 <!-- This should be greyed out and inactive if the user has not selected return -->
@@ -154,5 +159,4 @@
         </div>
     </nav>
 </section>
-
 </body>
