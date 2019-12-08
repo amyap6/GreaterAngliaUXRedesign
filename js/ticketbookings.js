@@ -27,27 +27,37 @@ $(document).ready(function () {
     $('input[type="date"]').val(new Date().toDateInputValue());
     $('input[type="number"]').val(1)
     $('input[type="time"]').val(new Date().toTimeInputValue());
-
-
 });
 
-/*
-<?php
-    $keys = array('id_number','first_name');
-$csv_line = array();
-foreach($keys as $key){
-    array_push($csv_line,'' . $_GET[$key]);
+/*Export to .csv*/
+function exportTableToCSV(html, filename) {
+    var csv = [];
+    var data = document.querySelectorAll("input");
+
+    for(var i = 0; i < data.length; i++){
+        csv.push(data[i].value);
+    }
+
+    // download csv file
+    downloadCSV(csv.join("\n"), filename);
 }
-$fname = 'file_to_write_to.csv';
-$csv_line = implode(',',$csv_line);
-if(!file_exists($fname)){$csv_line = "\r\n" . $csv_line;}
-$fcon = fopen($fname,'a');
-$fcontent = $csv_line;
-fwrite($fcon,$csv_line);
-fclose($fcon);
-    ?>
 
- https://stackoverflow.com/questions/22264375/how-to-export-html-form-to-csv-file
- */
+/*download to csv function*/
+function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
 
+    if (window.Blob == undefined || window.URL == undefined || window.URL.createObjectURL == undefined) {
+        alert("Your browser doesn't support Blobs");
+        return;
+    }
+
+    csvFile = new Blob([csv], {type:"text/csv"});
+    downloadLink = document.createElement("a");
+    downloadLink.download = filename;
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+}
 

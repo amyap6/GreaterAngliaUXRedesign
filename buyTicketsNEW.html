@@ -118,8 +118,7 @@
                 </div>
                 <!-- options here -->
                 <label for="passengers">Passengers: </label><input type="number" name="Adults" id="passengers"><br>
-                <input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor" id="submitBook">
-
+                <input onclick="exportTableToCSV(null,'test.csv')" type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor" id="submitBook">
             </form>
         </div>
         <div style="width: 30%; display: inline-block; float: right;" id="navright">
