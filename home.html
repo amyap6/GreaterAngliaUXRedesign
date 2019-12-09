@@ -94,7 +94,7 @@
 <header class="masthead">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
-            <div class="col-12 text-center">
+            <div class="col-12 col-s-12 text-center">
                 <h1 class="font-weight-light">Welcome to Greater Anglia Rail</h1>
                 <p class="lead" style="text-align: center">New Trains, new space, new possibilities. It's happening.</p>
             </div>
@@ -106,7 +106,9 @@
 <!-- Page Content -->
 <section class="py-5" id="main" tabindex="-1">
     <div class="container">
-        <div class="bookHome" style="width: 40%; display: inline-block; float: left">
+<div class="row">
+            <div class="col-5 col-s-12">
+        <div class="bookHome" >
             <h3 >Book a Ticket</h3>
             <form class="bookTicket">
                 <label for="from">From:</label><input type="text" name="FromStation" id="from"><br>
@@ -130,23 +132,28 @@
                 <input type="submit" name="submitTicket" value="Get Tickets" onmouseover="cursor" id="submitBook">
             </form>
         </div>
-        <div style="width: 55%; display: inline-block; float: right" class="service">
+            </div>
+            <div class="col-7 col-s-12">
+        <div class="service">
             <h3>Service Updates</h3>
             <h6>To view service updates for a specific date or train, check the <a href="serviceUpdates.html">service updates</a> page.</h6>
             <p>Display some updates here.</p>
         </div>
-        <div style="width: 55%; display: inline-block; float: right" class="live">
+        <div  class="live">
             <h3>Live Departures</h3>
             <h6>To view live departures and arrivals from a specific station, check the <a href="liveDepartures.html">live departures</a> page.</h6>
             <p>Display some departures here.</p>
         </div>
 
-        <div style="width: 100%; display: inline-block; float: bottom">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-s-12">
             <h3>Offers</h3>
             <p>Display some offers here.</p>
         </div>
-
-         </div>
+    </div>
+    </div>
 </section>
 
 <section>
