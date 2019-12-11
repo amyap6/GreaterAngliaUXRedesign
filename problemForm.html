@@ -15,6 +15,7 @@
         <p>Where is the problem?</p>
         <button style="float:left" onclick="showTrain()">Train</button>
         <button style="float:left" onclick="showStation()">Station</button>
+        <button style="float:left" onclick="showOther()">Other</button>
     <br>
         <!--If train is selected, show this -->
     <form id="trainForm" style="display:none">
@@ -54,6 +55,12 @@
         <label for="describe2">Please describe the problem.</label><br>
         <input type="text" id="describe2"><br>
         <input type="submit" value="Submit" id="submitStationProblem">
+    </form>
+    <form id="otherForm" style="display:none">
+        <!--Maybe another dropdown with more specific issues -->
+        <label for="describe3">Please describe the problem.</label><br>
+        <input type="text" id="describe3"><br>
+        <input type="submit" value="Submit" id="submitOtherProblem">
     </form>
 </div>
 </body>

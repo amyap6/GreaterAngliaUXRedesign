@@ -50,6 +50,9 @@
     display: table;
 }*/
 
+.dropbtn:hover {
+    text-decoration: underline;
+}
 
 .tab {
     overflow: hidden;
