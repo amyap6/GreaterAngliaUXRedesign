@@ -94,7 +94,9 @@
 </div>
 <section id="main" tabindex="-1">
     <div class="container">
-        <div class="bookHome" style="width: 40%; display: inline-block; float: left">
+        <div class="row">
+            <div class="col-5 col-s-12">
+        <div class="bookHome" >
             <h3 >Book a Ticket</h3>
             <form class="bookTicket">
                 <label for="from">From:</label><input type="text" name="FromStation" id="from" placeholder="Enter origin station..."><br>
@@ -120,15 +122,38 @@
                 <input onclick="exportTableToCSV(null,'test.csv')" type="submit" name="submitTicket" value="Search" onmouseover="cursor" id="submitBook">
             </form>
         </div>
-        <div style="width: 30%; display: inline-block; float: right;" id="navright">
+            </div>
+            <div class="col-4"></div>
+            <div class="col-3" style="float:right;">
+        <div id="navright">
             <div style="margin-top: 5%"><a>Timetables</a></div>
             <div><a>Station Information</a></div>
             <div><a>Onboard Facilities</a></div>
             <div><a>Airport and Bus Information</a></div>
         </div>
-        <div style="width: 100%; display: inline-block; float: bottom;">
-            <h3>Offers</h3>
+            </div>
+        <div class="row" style="background-color: lightsteelblue;margin-top:5%;">
+            <div class="col-12 col-s-12">
+                <h3>Offers</h3>
+                <div class="offers">
+                    <img src="greateranglia.jpg" alt="Greater Anglia Train">
+                    <a href="#">Cheap Advance Single Tickets</a>
+                </div>
+                <div class="offers">
+                    <img src="bigben.jpg" alt="Big Ben">
+                    <a href="#">2 For 1 Attractions in London</a>
+                </div>
+                <div class="offers">
+                    <img src="eastanglia.jpg" alt="East Anglia countryside">
+                    <a href="#">Days Out in East Anglia</a>
+                </div>
+                <div class="offers">
+                    <img src="southend.jpg" alt="Southend seafront">
+                    <a href="#">Offers in Southend-On-Sea</a>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 
 </section>

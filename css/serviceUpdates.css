@@ -102,17 +102,18 @@
     margin-right: 5%;
 }
 
-#leftbox button {
+.leftbox button {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    color:red;
 }
 
-#leftbox button a {
-    color: red;
+.leftbox button:hover, .leftbox button:focus {
+    text-decoration: underline;
 }
 
 .compensation #top{
@@ -351,7 +352,7 @@ a:-webkit-any-link{
 
 .dropbtn:hover {
     text-decoration: none;
-    color: black;
+    color: #ce0012;
     border:none;
 }
 
@@ -363,12 +364,13 @@ a:-webkit-any-link{
     align-self: center;
 }
 
-.service a, .live a, .breadcrumbs a {
+.service a, .live a, .breadcrumbs a , .problems a{
     text-decoration: none;
     color: red;
 }
 
-.service a:hover, .service a:focus, .live a:hover, .live a:focus, .breadcrumbs a:hover, .breadcrumbs a:focus{
+.service a:hover, .service a:focus, .live a:hover, .live a:focus, .breadcrumbs a:hover,
+.breadcrumbs a:focus, .problems a:hover, .problems a:focus{
     color: red;
     text-decoration: underline;
 }

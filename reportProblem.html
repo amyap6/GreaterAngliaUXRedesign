@@ -119,12 +119,29 @@
 </div>
 <section id="main" tabindex="-1">
     <div class="container">
-        <div style="width: 60%; display: inline-block; float: left;">
+        <div style="width: 60%; display: inline-block; float: left;" class="problems">
             <h3>Report Problem</h3>
-            <p>Description</p>
+            <p>If you notice a problem, tell us about it and we'll fix it as soon as we can. </p>
+            <p>Once you've submitted a problem report, you can check its status or response in the <a href="#existing" >existing reports</a> section</p>
+            <div class="leftbox">
             <button onclick="window.location.href='problemForm.html'">Report New Problem</button>
-            <button>View Existing Reports</button>
-            <p>More description if needed</p>
+            </div>
+            <h4 style="margin-top: 5%;margin-bottom:3%;" id="existing">Existing Reports</h4>
+            <table >
+                <tr>
+                    <th>Date Submitted</th><th>Location</th><th>Type of Problem</th><th>Response</th>
+                </tr>
+                <tr>
+                    <td>10/12/2019</td><td>Norwich Station</td><td>Ticket Machines</td><td>Awaiting Response</td>
+                </tr>
+                <tr>
+                    <td>7/12/2019</td><td>LST to Norwich Train, Carriage D </td><td>Heating</td><td>Response Recieved: <a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>24/11/2019</td><td>Great Yarmouth Station</td><td>Vandalism</td><td>Response Recieved: <a href="#">View</a></td>
+                </tr>
+            </table>
+            <p style="margin-top: 3%">If you've been waiting a while and would like a rapid response, visit our <a href="contact.html">contact us</a> page.</p>
         </div>
         <div style="width: 30%; display: inline-block; float: right" id="navright">
             <div style="margin-top: 5%"><a>Emergency Information</a></div>

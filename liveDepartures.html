@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="css/serviceUpdates.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -123,19 +122,57 @@
 <section class="py-5" id="main" tabindex="-1">
     <div class="container">
         <h3>Departure and Arrival Boards</h3>
-        <div style="width: 60%; display: inline-block; float: left; margin-top: 5%; margin-bottom: 5%">
-            Search for a Station
+        <div style="width: 60%; display: inline-block; float: left;">
+            <form>
+                <input type="text" placeholder="Enter a station..." name="search" style="display:inline;">
+                <button type="submit" style="display:inline;">Search</button>
+            </form>
         </div>
-        <div style="width: 30%; display: inline-block; float: right; margin-top: 5%; margin-bottom: 5%" id="navright">
+        <div style="width: 30%; display: inline-block; float: right; margin-top: 5%; " id="navright">
             <div><a>London Underground</a></div>
         </div>
-        <div style="width: 60%; display: block; float: bottom; margin-top: 5%; margin-bottom: 5%">
+        <div style="width: 60%; display: block; float: bottom; margin-top: 15%; margin-bottom: 5%;background-color:lightsteelblue">
             <h4>Departures</h4>
-        <p> Populate with departures here</p>
+            <p>Showing departures for: <b>Norwich</b></p>
+            <table>
+                <tr>
+                    <th>Platform</th><th>Destination</th><th>Departs</th><th>Expected</th><th>Operator</th>
+                </tr>
+                <tr>
+                    <td>1</td><td>London Liverpool Street</td><td>17:03</td><td>On time</td><td>Greater Anglia</td>
+                </tr>
+                <tr>
+                    <td>3</td><td>Great Yarmouth</td><td>17:06</td><td>On time</td><td>Greater Anglia</td>
+                </tr>
+                <tr>
+                    <td>2</td><td>Cromer</td><td>17:45</td><td>17:56</td><td>Greater Anglia</td>
+                </tr>
+                <tr>
+                    <td>5</td><td>Nottingham</td><td>17:54</td><td>Cancelled</td><td>East Midlands Railway</td>
+                </tr>
+            </table>
         </div>
-        <div style="width: 60%; display: block; float: bottom; margin-top: 5%; margin-bottom: 5%">
+        <div style="width: 60%; display: block; float: bottom; margin-top: 5%; margin-bottom: 5%;background-color:lightsteelblue">
             <h4>Arrivals</h4>
-            <p> Populate with arrivals here</p></div>
+            <p>Showing arrivals for: <b>Norwich</b></p>
+            <table>
+                <tr>
+                    <th>Platform</th><th>Origin</th><th>Arrives</th><th>Expected</th><th>Operator</th>
+                </tr>
+                <tr>
+                    <td>3</td><td>Liverpool Lime Street</td><td>19:16</td><td>19:49</td><td>East Midlands Railway</td>
+                </tr>
+                <tr>
+                    <td>2</td><td>Ely</td><td>19:30</td><td>On time</td><td>Greater Anglia</td>
+                </tr>
+                <tr>
+                    <td>5</td><td>Lowestoft</td><td>19:36</td><td>On time</td><td>Greater Anglia</td>
+                </tr>
+                <tr>
+                    <td>1</td><td>Cromer</td><td>19:46</td><td>19:52</td><td>Greater Anglia</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </section>
 
