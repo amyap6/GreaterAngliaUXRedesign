@@ -86,7 +86,8 @@
 
 <!-- Ticket booking section -->
 <section>
-    <button type="button" class="collapsible">Book A Ticket</button>
+    <button type="button" class="collapsible" onmouseover="showCollapsible()">Book A Ticket</button>
+    <div class="content">
     <div class="bookOther" style="width: 100%; display: inline-block; float: top">
         <form style="margin-top: 1%">
             <label for="fromO">From:</label><input type="text" name="FromStation" id="fromO">
@@ -111,6 +112,7 @@
                 <input type="submit" name="submitTicket" value="Search" onmouseover="cursor" id="submitBookO">
             </div>
         </form>
+    </div>
     </div>
 </section>
 <div class="breadcrumbs">
