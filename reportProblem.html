@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="css/serviceUpdates.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script src="js/reportProblem.js"></script>
 </head>
 
 <body>
@@ -148,7 +148,16 @@
         </div>
         <div style="width: 60%; display: inline-block; float: bottom;">
             <h3>FAQs</h3>
-            <p>Questions with dropdowns for answers</p>
+            <button type="button" class="collapsible" onmouseover="showCollapsible()">When can I expect a response?</button>
+            <div class="content">
+                <p>Depending on what sort of problem you are reporting, it can take from 2 to 10 days for a response.
+                We aim to respond as quickly as we can, but during busy periods this may take longer than usual.
+            </div>
+            <button type="button" class="collapsible" onmouseover="showCollapsible()">What if I've waited too long for a response</button>
+            <div class="content">
+                <p>If you feel you have waited too long for a response, you can <a href="contact.html">contact us</a>
+                by phone, email, or text message.</p>
+            </div>
         </div>
     </div>
 </section>
