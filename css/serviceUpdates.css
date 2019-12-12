@@ -269,7 +269,7 @@ a:-webkit-any-link{
     display: inline;
 }
 
-#outDate, #outTime, #returnDate, #returnTime, #passengers {
+#outDate, #outTime, #returnDate, #returnTime, #passengers, #childPassenger {
     display: inline;
     float:right;
     margin-right: 25%;
