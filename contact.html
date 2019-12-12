@@ -128,7 +128,7 @@
                 <div class="col-12 col-s-12">
                     <div class="offers">
                         <img src="email.png" alt="Email icon">
-                        <a href="#">Email</a>
+                        <a href="#emailform">Email</a>
                     </div>
                     <div class="offers">
                         <img src="phone.jpg" alt="Phone Icon">
@@ -158,8 +158,31 @@
         </div>
         <div style="width: 60%; display: inline-block; float: bottom;margin-top:4%;">
             <p><b>Email Form</b></p>
-            <form>
-
+            <form id="emailform">
+                <label for="fullname">Full Name:</label><input type="text" id="fullname" required="required"><br>
+                <label for="email">Email:</label><input type="text" id="email" required="required"><br>
+                <label for="phoneno">Phone Number:</label><input type="text" id="phoneno" required="required"><br>
+                <label for="typeOfContact">What are you contacting us about?</label><br>
+                <select id="typeOfContact">
+                    <option value="trainTicket">Train Ticket</option>
+                    <option value="lostProperty">Lost Property</option>
+                    <option value="customerRelations">Customer Relations</option>
+                    <option value="disabledAssistance">Disabled Assistance</option>
+                    <option value="delayRepay">Delay Repay</option>
+                    <option value="otherContact" onclick="otherFormField()">Other</option>
+                </select><br>
+                <label for="comment">Your Question/Comment</label><input type="text" id="comment" required="required">
+                <p>How would you like us to contact you?</p>
+                <label for="contactType1">Phone</label>
+                <input type="checkbox" id="contactType1"><br>
+                <label for="contactType2">Text Message</label>
+                <input type="checkbox" id="contactType2"><br>
+                <label for="contactType3">Email</label>
+                <input type="checkbox" id="contactType3" checked="checked"><br>
+                <p>Would you like to recieve special offers and services from Greater Anglia by email?</p>
+                <label for="yes">Yes please</label><input type="radio" id="yes"><br>
+                <label for="no">No thank you</label><input type="radio" id="no" checked="checked"><br>
+                <input type="submit" name="submitContact" value="Submit" onmouseover="cursor" class="leftbox">
             </form>
         </div>
     </div>
