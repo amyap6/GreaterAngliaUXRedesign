@@ -98,19 +98,6 @@
         <div class="bookHome" style="width: 40%; display: inline-block; float: left">
             <h3 >Book a Ticket</h3>
             <form class="bookTicket">
-                <!--ORIGINAL<label for="from">From:</label><input type="text" name="FromStation" id="from" placeholder="Enter origin station..."><br>-->
-                <!--Last Working version-->
-                <!--
-                <label for="from">From:</label><input list="destinationFrom" name="FromStation" id="from" placeholder="Enter origin station..."><br>
-                <datalist id="destinationFrom">
-                    <option value="Chrome">
-                    <option value="Firefox">
-                    <option value="Internet Explorer">
-                    <option value="Opera">
-                    <option value="Safari">
-                    <option value="Microsoft Edge">
-                </datalist>
-                -->
                 <form autocomplete="off" action="/action_page.php">
                     <div class="autocomplete">
                         <label for="from">From:</label><input class= "autocomplete" type="text" name="FromStation" id="fromStation" placeholder="Enter origin station..."><br>
@@ -120,8 +107,6 @@
                         <label for="to">To:</label><input class= "autocomplete" type="text" name ="ToStation" id="toStation" placeholder="Enter destination station...">
                     </div>
                 </form>
-
-                <!--<label for="to">To:</label><input type="text" name ="ToStation" id="to" placeholder="Enter destination station...">-->
                 <br>
                 <fieldset>
                     <legend><span>What ticket type do you require?</span></legend>
