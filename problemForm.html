@@ -5,7 +5,14 @@
     <title>Report Problem Form</title>
 
     <link rel="stylesheet" href="css/serviceUpdates.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script src="js/problemForm.js"></script>
+    <script src="js/reportProblem.js"></script>
 </head>
 <body>
 <div class="problemForm">
@@ -20,47 +27,60 @@
         <!--If train is selected, show this -->
     <form id="trainForm" style="display:none">
         <label for="searchtrain"></label>
-        <input type="search" placeholder="Search for a train" id="searchtrain"><br>
-        <label for="typeOfProblem">What sort of problem is it?</label><br>
-        <select id="typeOfProblem">
-            <option value="trainDoor">Train Door</option>
-            <option value="heatingtrain">Heating or Air Conditioning</option>
-            <option value="trainToilet">Toilet Facilities</option>
-            <option value="trainlive">Live Announcements</option>
-            <option value="wifitrain">WiFi</option>
-            <option value="vandaltrain">Vandalism</option>
-            <option value="othertrain" onclick="otherFormField()">Other</option>
-        </select><br>
-        <!--Maybe another dropdown with more specific issues -->
-        <label for="describe">Please describe the problem.</label><br>
-        <input type="text" id="describe"><br>
-        <input type="submit" value="Submit" id="submitTrainProblem">
+        <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete">
+                <input class= "autocomplete" type="text" name="FromStation" id="searchtrain" placeholder="Search for train"><br>
+            </div>
+        </form>
+        <form id="trainForm2" style="display: none">
+            <label for="typeOfProblem">What sort of problem is it?</label><br>
+            <select id="typeOfProblem">
+                <option value="trainDoor">Train Door</option>
+                <option value="heatingtrain">Heating or Air Conditioning</option>
+                <option value="trainToilet">Toilet Facilities</option>
+                <option value="trainlive">Live Announcements</option>
+                <option value="wifitrain">WiFi</option>
+                <option value="vandaltrain">Vandalism</option>
+                <option value="othertrain" onclick="otherFormField()">Other</option>
+            </select><br>
+            <!--Maybe another dropdown with more specific issues -->
+            <label for="describe">Please describe the problem.</label><br>
+            <input type="text" id="describe"><br>
+            <input onclick="exportTableToCSV(null,'report.csv'); alertReport();" type="submit" value="Submit" id="submitTrainProblem">
+        </form>
     </form>
+
         <!--If station is selected, show this -->
     <form id="stationForm" style="display:none">
         <label for="searchstation"></label>
-        <input type="search" placeholder="Search for a station" id="searchstation"><br>
-        <label for="typeOfProblem2">What sort of problem is it?</label><br>
-        <select id="typeOfProblem2">
-            <option value="ticketMachines">Ticket Machines</option>
-            <option value="ticketBarriers">Ticket Barriers</option>
-            <option value="heatingstation">Heating or Air Conditioning</option>
-            <option value="stationtoilet">Toilet Facilities</option>
-            <option value="stationlive">Live Announcements</option>
-            <option value="wifistation">WiFi</option>
-            <option value="vandalstation">Vandalism</option>
-            <option value="otherstation" onclick="otherFormField2()">Other</option>
-        </select><br>
-        <!--Maybe another dropdown with more specific issues -->
-        <label for="describe2">Please describe the problem.</label><br>
-        <input type="text" id="describe2"><br>
-        <input type="submit" value="Submit" id="submitStationProblem">
+        <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete">
+                </label><input class= "autocomplete" type="text" name="FromStation" id="searchstation" placeholder="Search for station"><br>
+            </div>
+        </form>
+        <form id="stationForm2" style="display: none">
+            <label for="typeOfProblem2">What sort of problem is it?</label><br>
+            <select id="typeOfProblem2">
+                <option value="ticketMachines">Ticket Machines</option>
+                <option value="ticketBarriers">Ticket Barriers</option>
+                <option value="heatingstation">Heating or Air Conditioning</option>
+                <option value="stationtoilet">Toilet Facilities</option>
+                <option value="stationlive">Live Announcements</option>
+                <option value="wifistation">WiFi</option>
+                <option value="vandalstation">Vandalism</option>
+                <option value="otherstation" onclick="otherFormField2()">Other</option>
+            </select><br>
+            <!--Maybe another dropdown with more specific issues -->
+            <label for="describe2">Please describe the problem.</label><br>
+            <input type="text" id="describe2"><br>
+            <input onclick="exportTableToCSV(null,'report.csv'); alertReport();" type="submit" value="Submit" id="submitStationProblem">
+        </form>
     </form>
     <form id="otherForm" style="display:none">
         <!--Maybe another dropdown with more specific issues -->
         <label for="describe3">Please describe the problem.</label><br>
         <input type="text" id="describe3"><br>
-        <input type="submit" value="Submit" id="submitOtherProblem">
+        <input onclick="exportTableToCSV(null,'report.csv'); alertReport();" type="submit" value="Submit" id="submitOtherProblem">
     </form>
 </div>
 </body>
